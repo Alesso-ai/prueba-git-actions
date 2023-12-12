@@ -21,7 +21,7 @@ jobs:
                     sudo rm -rf html
                     sudo mkdir html
                     cd html
-                    sudo git clone https://github.com/Alesso-ai/prueba-git-actions.git
+                    sudo git clone https://github.com/Alesso-ai/prueba-git-actions.git .
                     sudo systemctl restart nginx
 
                 
