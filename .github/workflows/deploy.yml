@@ -16,4 +16,12 @@ jobs:
                 host: ${{ secrets.EC2_HOST }}
                 username: ${{ secrets.EC2_USERNAME }}
                 key: ${{ secrets.EC2_PRIVATE_KEY }}
+                script: |
+                    cd /var/www
+                    sudo rm -rf html
+                    sudo mkdir html
+                    cd html
+                    sudo git clone https://github.com/Alesso-ai/prueba-git-actions.git
+                    sudo systemctl restart nginx
+
                 
