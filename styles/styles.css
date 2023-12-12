@@ -1,0 +1,100 @@
+@font-face {
+  font-family: "RobotoMono";
+  src: url("../assets/fonts/RobotoMono-VariableFont_wght.ttf");
+}
+
+body {
+  background-color: #050514;
+  background-image: url("../assets/imgs/veneno.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.button {
+  font-family: "RobotoMono";
+}
+.container {
+  font-family: "RobotoMono";
+  background-color: rgb(175, 81, 122);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgb(43, 39, 174) 100%
+  );
+  max-width: 400px;
+  margin: auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+.header {
+  border-bottom: 1px solid black;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.boton-agregar {
+  display: block;
+  margin: auto;
+  margin-top: -15px;
+  padding: 4px 10px;
+  font-weight: bold;
+  border: 3px solid #000000;
+}
+
+.boton-limpiar {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  padding: 4px 10px;
+  font-weight: bold;
+  border: 3px solid #000000;
+}
+
+.boton-agregar:hover {
+  background: rgb(100, 214, 100);
+}
+
+.lista-tareas {
+  list-style: none;
+  padding: 0;
+  display: block;
+  text-align: center;
+  align-items: center;
+}
+.lista-tareas li {
+  animation: aparecer 0.75s
+  ease-in-out;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY((-20px));
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes desaparecer {
+  0% {
+    opacity: 1;
+    transform: translateY((0));
+  }
+  100% {
+    opacity: 0;
+    transform: translateY((-20));
+  }
+}
+
+.lista-tareas li.eliminadas{
+    animation:desaparecer 0.5s ease-in;
+
+}
+
+
